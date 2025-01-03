@@ -18,6 +18,12 @@ window.addEventListener("mousemove", function(event)
     mouse.y = event.clientY
 })
 
+window.addEventListener("touchmove", function(event){
+    const touch = event.touches[0]
+    mouse.x = touch.clientX
+    mouse.y = touch.clientY
+})
+
 function random_in_range(min, max)
 {
     return Math.floor(Math.random() * (max - min) + min)
